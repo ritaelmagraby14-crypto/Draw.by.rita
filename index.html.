@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>drawn.by.rita | Art Collection</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #192b50;
+  color: white;
+  font-family: Georgia, serif;
+  text-align: center;
+}
+
+header {
+  padding: 65px 20px 40px;
+}
+
+h1 {
+  font-family: cursive;
+  font-size: clamp(43px, 8vw, 75px);
+  font-weight: normal;
+  color: #f2c8d9;
+  margin: 0 0 18px;
+}
+
+header p {
+  font-size: 13px;
+  letter-spacing: 5px;
+}
+
+.lace {
+  width: 100%;
+  height: 90px;
+  background-image: url("https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Decorative-Elements-PNG/White_Lace_Border_Frame_Transparent_Image.png");
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: auto 90px;
+}
+
+.welcome {
+  max-width: 750px;
+  margin: 45px auto;
+  padding: 25px;
+}
+
+.welcome h2 {
+  color: #f2c8d9;
+  font-weight: normal;
+  letter-spacing: 3px;
+  font-size: 25px;
+}
+
+.welcome p {
+  color: #f1edf2;
+  font-size: 16px;
+  line-height: 2;
+}
+
+.welcome .welcome-note {
+  font-style: italic;
+  color: #f2c8d9;
+}
+
+h2 {
+  color: #f2c8d9;
+  font-weight: normal;
+  font-size: 24px;
+  letter-spacing: 4px;
+  margin: 45px 0 20px;
+}
+
+.subtitle {
+  color: #e5e7ef;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.painting {
+  background: white;
+  color: #192b50;
+  padding: 15px;
+  border: 1px solid #e7d5df;
+  border-radius: 3px;
+}
+
+.painting img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  background: #e9e5e8;
+}
+
+.painting h3 {
+  font-size: 23px;
+  font-weight: normal;
+  margin: 20px 0 12px;
+}
+
+.details {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.status {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 20px;
+  background: #e0ecdf;
+  color: #365c3b;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.sold {
+  background: #f3e0e5;
+  color: #8b4057;
+}
+
+.inquire-button {
+  display: block;
+  margin: 12px auto 5px;
+  padding: 12px 15px;
+  width: 100%;
+  background: #192b50;
+  color: white;
+  border: 1px solid #192b50;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.inquire-button:hover {
+  background: #f2c8d9;
+  color: #192b50;
+}
+
+.inquire-button:disabled {
+  background: #999;
+  border-color: #999;
+  cursor: not-allowed;
+}
+
+.about {
+  max-width: 750px;
+  margin: 65px auto 45px;
+  padding: 20px;
+}
+
+.about p {
+  color: #f1edf2;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.instagram {
+  padding: 20px;
+  margin: 35px auto 55px;
+}
+
+.instagram p {
+  color: #f1edf2;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.instagram a {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 13px 28px;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.instagram a:hover {
+  background: white;
+  color: #192b50;
+}
+
+.thank-you {
+  display: none;
+  max-width: 550px;
+  margin: 35px auto;
+  padding: 30px 20px;
+  background: white;
+  color: #192b50;
+  border: 1px solid #f2c8d9;
+}
+
+.thank-you h2 {
+  color: #192b50;
+  font-size: 22px;
+}
+
+.thank-you p {
+  line-height: 1.8;
+}
+
+.thank-you button {
+  padding: 11px 25px;
+  background: #192b50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: Georgia, serif;
+}
+
+footer {
+  padding: 30px 15px;
+  color: #f2c8d9;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    max-width: 430px;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>drawn.by.rita</h1>
+  <p>AVAILABLE ARTWORK</p>
+</header>
+
+<div class="lace"></div>
+
+<section class="welcome">
+  <h2>WELCOME TO MY ART WORLD</h2>
+  <p>
+    A little corner filled with creativity, colour,
+    and original artwork. Every painting has its
+    own story, and I hope you find one that speaks
+    to you.
+  </p>
+  <p class="welcome-note">
+    Every painting tells a story.
+    Find the one that speaks to you.
+  </p>
+</section>
+
+<div class="lace"></div>
+
+<h2>THE COLLECTION</h2>
+<p class="subtitle">Original artworks</p>
+
+<main class="gallery">
+
+  <!-- BLUE SERENITY -->
+  <article class="painting">
+    <img src="https://i.postimg.cc/GpZ7LKnT/IMG-4549.jpg"
+         alt="Blue Serenity">
+    <h3>Blue Serenity</h3>
+    <p class="details">Size: 100 × 70 cm</p>
+    <p class="price">130 JD</p>
+    <span class="status">Available</span>
+    <button class="inquire-button"
+      onclick="inquire('Blue Serenity', '130 JD')">
+      INQUIRE ABOUT ARTWORK
+    </button>
+  </article>
+
+  <!-- COASTAL REVERIE -->
+  <article class="painting">
+    <img src="https://i.postimg.cc/QdYYPs6V/IMG-4553.jpg"
+         alt="Coastal Reverie">
+    <h3>Coastal Reverie</h3>
+    <p class="details">Size: 90 × 60 cm</p>
+    <p class="price">120 JD</p>
+    <span class="status">Available</span>
+    <button class="inquire-button"
+      onclick="inquire('Coastal Reverie', '120 JD')">
+      INQUIRE ABOUT ARTWORK
+    </button>
+  </article>
+
+  <!-- A TOUCH OF CITRUS -->
+  <article class="painting">
+    <img src="https://i.postimg.cc/dVJKvqmg/IMG-4547.jpg"
+         alt="A Touch of Citrus">
+    <h3>A Touch of Citrus</h3>
+    <p class="price">80 JD</p>
+    <span class="status">Available</span>
+    <button class="inquire-button"
+      onclick="inquire('A Touch of Citrus', '80 JD')">
+      INQUIRE ABOUT ARTWORK
+    </button>
+  </article>
+
+  <!-- TROPICAL STILLNESS -->
+  <article class="painting">
+    <img src="https://i.postimg.cc/HsjKdVfx/IMG-3866.jpg"
+         alt="Tropical Stillness">
+    <h3>Tropical Stillness</h3>
+    <p class="details">Size: 20 × 20 cm</p>
+    <p class="price">70 JD</p>
+    <span class="status">Available</span>
+    <button class="inquire-button"
+      onclick="inquire('Tropical Stillness', '70 JD')">
+      INQUIRE ABOUT ARTWORK
+    </button>
+  </article>
+
+  <!-- LILY IN BLOOM -->
+  <article class="painting">
+    <img src="https://i.postimg.cc/LhK2jLP2/IMG-4550.jpg"
+         alt="Lily in Bloom">
+    <h3>Lily in Bloom</h3>
+    <p class="price">40 JD</p>
+    <span class="status">Available</span>
+    <button class="inquire-button"
+      onclick="inquire('Lily in Bloom', '40 JD')">
+      INQUIRE ABOUT ARTWORK
+    </button>
+  </article>
+
+  <!-- NATURE'S EMBRACE -->
+  <article class="painting">
+    <img src="https://i.postimg.cc/qR67nkFX/IMG-4551.jpg"
+         alt="Nature's Embrace">
+    <h3>Nature's Embrace</h3>
+    <p class="price">150 JD</p>
+    <span class="status sold">Sold</span>
+    <button class="inquire-button" disabled>
+      SOLD
+    </button>
+  </article>
+
+</main>
+
+<div class="lace"></div>
+
+<section class="about">
+  <h2>ABOUT THE ARTIST</h2>
+  <p>
+    Art has always been a special way for me to express
+    feelings, creativity, and imagination. I attended art
+    school for two years, where I developed my skills and
+    explored different techniques. I believe art is not only
+    something you learn, but also a natural talent and a
+    beautiful way to express yourself. I created
+    drawn.by.rita to share my artwork, turn my passion
+    into something of my own, and earn money through
+    something I truly enjoy.
+  </p>
+</section>
+
+<section class="instagram">
+  <h2>LET'S CONNECT</h2>
+  <p>
+    Follow my art journey and discover more of my work.
+  </p>
+  <a href="PASTE YOUR INSTAGRAM LINK HERE"
+     target="_blank"
+     rel="noopener noreferrer">
+    Visit my Instagram
+  </a>
+</section>
+
+<section class="thank-you" id="thankYou">
+  <h2>THANK YOU! 🤍</h2>
+  <p>
+    Thank you for your interest in my artwork!
+    Your inquiry is ready to send. I'll be happy
+    to hear from you.
+  </p>
+  <button onclick="closeThankYou()">
+    BACK TO COLLECTION
+  </button>
+</section>
+
+<div class="lace"></div>
+
+<footer>
+  DRAWN BY RITA
+</footer>
+
+<script>
+function inquire(painting, price) {
+  const email = "YOUR_EMAIL_ADDRESS_HERE";
+
+  const subject = encodeURIComponent(
+    "Artwork inquiry - " + painting
+  );
+
+  const body = encodeURIComponent(
+    "Hello! I am interested in " + painting +
+    " (" + price + "). Please tell me more about purchasing it."
+  );
+
+  document.getElementById("thankYou").style.display = "block";
+
+  document.getElementById("thankYou").scrollIntoView({
+    behavior: "smooth"
+  });
+
+  window.location.href =
+    "mailto:" + email +
+    "?subject=" + subject +
+    "&body=" + body;
+}
+
+function closeThankYou() {
+  document.getElementById("thankYou").style.display = "none";
+}
+</script>
+
+</body>
+</html>
